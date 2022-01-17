@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from __future__ import print_function
+
 
 import inkex
 import cubicsuperpath, simplestyle, copy, math, re, bezmisc, simplepath
@@ -40,7 +40,7 @@ class ofsplot(inkex.Effect):
 
     def effect(self):
 
-        for id, node in self.selected.iteritems():
+        for id, node in self.selected.items():
             if node.tag == inkex.addNS('path','svg'):
                 p = cubicsuperpath.parsePath(node.get('d'))
 
